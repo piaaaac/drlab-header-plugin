@@ -1,0 +1,45 @@
+
+#ap-header-social-lang-container {
+	position: absolute;
+  top: 28px;
+  right: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#ap-header-social-lang-container a {
+	display: inline-block;
+	margin: 0 5px;
+  height: 0;
+}
+
+#ap-header-social-lang-container a[data-social]::before {
+	content: "";
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;	
+}
+#ap-header-social-lang-container a[data-social='instagram']::before {
+	background-image: url("icon-ig.png");
+}
+#ap-header-social-lang-container a[data-social='twitter']::before {
+	background-image: url("icon-tw.png");
+}
+
+#ap-header-social-lang-container span.divider {
+	width: 20px;
+}
+
+@media (max-width: 420px) {  
+	.mobmenu .mob-menu-logo-holder {
+		width: 50px;
+		overflow: hidden;
+	}
+	.mobmenu .mob-standard-logo, .mobmenu .mob-retina-logo {
+		max-width: unset !important;
+	}
+}
